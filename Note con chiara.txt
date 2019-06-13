@@ -1,0 +1,146 @@
+Ciao Pawel,
+ho visto il tuo primo push, volevo darti un consiglio su bootstrap.
+Il framework per funzionare deve essere usato così:
+ <div class="container">
+       <div class="row">
+         <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+           <h1 class="heading-secondary">Portfolio</h1>
+         </div>
+       </div>
+</div>
+
+quindi un container contiene uno o più row che a sua volta contiene delle col
+per la navbar guarda gli esempi tipo questo
+https://getbootstrap.com/docs/3.4/examples/navbar-static-top/
+nel tuo caso hai un problema con le classi
+<body>
+   <div class="container">
+     <header> <-- questo deve stare prima di container
+qui aggiungi div.row
+         <div class="col-lg-2 col-lg-offset-3">
+           <h2>Start bootstrap</h2>
+         </div>
+         <div class="col-lg-2 col-lg-offset-3">
+           <ul>
+             <li>Portfolio</li>
+             <li>About</li>
+             <li>Contact</li>
+           </ul>
+         </div>
+     </header><-- questo deve essere invertito con il div sotto
+   </div>
+ </body>
+
+Pawel Rozdzynski [5:15 PM]
+non dovrei avere però container-fluid ? per farlo estendere a tutta la larghezza ?
+
+Chiara Passaro [5:15 PM]
+nel tuo style personale crea delle classi con nomi diversi da quelli del framework e aggiungili ai tag, non aggiungere regole alle classi di bootstrap.
+puoi usare anche container-fluid certo
+ma guarda bene gli esempi quando vedi che qualcosa non funziona
+è facile confondersi e usare le classi in un modo diverso da quello pensato da bootstrap
+
+Pawel Rozdzynski [5:16 PM]
+quindi
+Untitled 
+section .container-fluid {
+ height: 700px;
+ background-color: #1ABC9C;
+}
+questo lo devo cambiare in pratica ?
+e poi come andare a modificare "gli esempi" delle nav bar fornite da bootstrap ?
+dovrei andare a interagire direttamente con codice css del bootstrap ?
+
+Chiara Passaro [5:17 PM]
+esatto, creati una classe o un id tipo #section-green
+copia l'esempio html e modifica quello che non ti serve
+<nav class="navbar navbar-default navbar-static-top">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#">Project name</a>
+       </div>
+       <div id="navbar" class="navbar-collapse collapse">
+         <ul class="nav navbar-nav">
+           <li class="active"><a href="#">Home</a></li>
+           <li><a href="#">About</a></li>
+           <li><a href="#">Contact</a></li>
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+               <li><a href="#">Action</a></li>
+               <li><a href="#">Another action</a></li>
+               <li><a href="#">Something else here</a></li>
+               <li role="separator" class="divider"></li>
+               <li class="dropdown-header">Nav header</li>
+               <li><a href="#">Separated link</a></li>
+               <li><a href="#">One more separated link</a></li>
+             </ul>
+           </li>
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+           <li><a href="../navbar/">Default</a></li>
+           <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+           <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+         </ul>
+       </div><!--/.nav-collapse -->
+     </div>
+   </nav>
+tipo questo
+
+Pawel Rozdzynski [5:18 PM]
+e metto #section-green all'interno del .container-fluid ?
+
+Chiara Passaro [5:20 PM]
+crea una struttura in html tipo questa
+section#section-green>.container>.row>.col-
+
+e nel tuo style
+#section-green{
+regole della tua sezione verde
+}
+<section id="section-green">
+     <div class="container">
+       <div class="row">
+         colonne
+       </div>
+     </div>
+</section>
+e ogni sezione ha un suo nome e delle sue regole, per il resto usi bootstrap
+
+Pawel Rozdzynski [5:22 PM]
+Ok, grazie mille
+
+Chiara Passaro [5:22 PM]
+:+1:
+
+Pawel Rozdzynski [5:33 PM]
+Una domanda veloce se posso, che è più volte che mi capita e lo risolvo sempre con soluzioni più strane, ma come fare una "decisa" divisione fra un div fixed e quello che lo segue
+visto che la mia "section" si sovvrapone al header
+
+Chiara Passaro [5:34 PM]
+chiaramente ti si sovrappone perché la fixed esce dal flusso, quindi devi dare un margin-top al tag che sta sotto la fixed
+della stessa dimensione dell'altezza del tag fixed
+
+Pawel Rozdzynski [5:34 PM]
+Ah ok quindi come avevo fatto altre volte
+Ma non avendo un'altezza fissa al "fixed"
+posso dare un margin-top automatico ?
+che si addatti insomma ?
+
+Chiara Passaro [5:35 PM]
+potresti dargli un'altezza e risolvere il problema
+purtroppo non lo può calcolare da solo
+proprio perché non sono sullo stesso piano
+
+Pawel Rozdzynski [5:36 PM]
+Ok, grazie mille allora :slightly_smiling_face:
+
+Chiara Passaro [5:36 PM]
+figurati
+buon lavoro :slightly_smiling_face:

@@ -1,6 +1,6 @@
 /* Mi occupo del header fisso intanto */
 
-header h2, header li  {
+header h2, header li, h1  {
   text-transform: uppercase;
   color: white;
   /* display: inline-block; */
@@ -12,15 +12,49 @@ header {
   width: 100%;
 }
 
+header .container-fluid {
+  height: 100px;
+}
+
+header h2 {
+  margin-top: 30px;
+  font-weight: 800;
+}
+
 li {
   list-style: none;
   display: inline-block;
+  margin: 40px 10px 0px 10px;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+a, a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+    color: white;
 }
 
 
 /* Mi occupo della prima sezione del sito */
 
-section .container-fluid {
-  height: 700px;
+section #section-green {
+  height: 70vh;
   background-color: #1ABC9C;
+  margin-top: 100px;
+}
+
+#section-green img {
+  margin-top: 120px;
+  margin-left: 20px;
+}
+
+#section-green h1 {
+  font-size: 65px;
+  color: white;
+  font-weight: 600;
+}
+
+#section-green hr {
+  display: inline-block;
+  width: 150px;
 }
