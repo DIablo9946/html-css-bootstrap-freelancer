@@ -1,13 +1,26 @@
+/* Mi occupo del header fisso intanto */
+
 header h2, header li  {
   text-transform: uppercase;
   color: white;
+  /* display: inline-block; */
 }
 
 header {
   position: fixed;
   background-color: #2C3E50;
+  width: 100%;
 }
 
 li {
-  list-style: none none;
+  list-style: none;
+  display: inline-block;
+}
+
+
+/* Mi occupo della prima sezione del sito */
+
+section .container-fluid {
+  height: 700px;
+  background-color: #1ABC9C;
 }
