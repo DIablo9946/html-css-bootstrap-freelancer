@@ -1,0 +1,13 @@
+header h2, header li  {
+  text-transform: uppercase;
+  color: white;
+}
+
+header {
+  position: fixed;
+  background-color: #2C3E50;
+}
+
+li {
+  list-style: none none;
+}
