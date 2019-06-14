@@ -88,6 +88,7 @@ header a, header a:hover, header a:active, header a:visited, header a:focus {
   width: 150px;
  height: 10px;
  color: #2C3E50;
+ border-top: 10px solid #2C3E50;
 }
 
 .hstar {
@@ -97,7 +98,6 @@ header a, header a:hover, header a:active, header a:visited, header a:focus {
 }
 
 #images img {
-  margin-bottom: 30px;
   border-radius: 15px;
   max-width: 100%;
 }
@@ -163,7 +163,7 @@ header a, header a:hover, header a:active, header a:visited, header a:focus {
 }
 
 .apart {
-  all: none;
+  all: unset;
 }
 
 form {
@@ -232,14 +232,28 @@ footer a {
 .overlayz {
   position: absolute;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  left: 15px;
   height: 100%;
-  width: 100%;
-  opacity: 0.7;
+  width: calc(100% - 30px);
+  opacity: 0.9;
   background-color: #1ABC9C;
   justify-content: center;
   align-content: center;
   display: none;
+  z-index: 10;
+  border-radius: 15px;
+}
+
+.hovimg:hover .overlayz {
+  display: block;
+  cursor: pointer;
+}
+
+.margbot {
+  margin-bottom: 30px;
+}
+
+.fas {
+  width: 30px;
+  height: 30px;
 }
