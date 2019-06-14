@@ -16,12 +16,10 @@ header {
 
 header h2 {
   font-size: 25px;
-}
-
-header h2 {
   margin-top: 30px;
   font-weight: 800;
 }
+
 
 li {
   list-style: none;
@@ -31,7 +29,7 @@ li {
   font-size: 17px;
 }
 
-a, a:hover, a:active, a:visited, a:focus {
+header a, header a:hover, header a:active, header a:visited, header a:focus {
     text-decoration:none;
     color: white;
 }
@@ -54,6 +52,7 @@ a, a:hover, a:active, a:visited, a:focus {
   font-size: 65px;
   color: white;
   font-weight: 600;
+  text-align: center;
 }
 
 #section-green hr, #about hr {
@@ -75,7 +74,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /* Mi occupo della seconda sezione del sito */
 
-#images h3 {
+#images h3, #contact h1 {
   font-size: 55px;
   color: #2C3E50;
   font-weight: 600;
@@ -84,7 +83,7 @@ a, a:hover, a:active, a:visited, a:focus {
   text-align: center;
 }
 
-#images hr {
+#images hr, #contact hr {
   display: inline-block;
   width: 150px;
  height: 10px;
@@ -101,6 +100,12 @@ a, a:hover, a:active, a:visited, a:focus {
   margin-bottom: 30px;
   border-radius: 15px;
   max-width: 100%;
+}
+
+.image:hover {
+  opacity: 0.7;
+  background-color: #1ABC9C;
+  cursor: pointer;
 }
 
 /* Mi occupo della teraz sezione  */
@@ -124,6 +129,27 @@ a, a:hover, a:active, a:visited, a:focus {
   font-size: 20px;
 }
 
+#about button {
+  background-color: #1ABC9C;
+  color: white;
+  border: 1px solid white;
+  padding: 20px;
+  font-weight: 600px;
+  margin-top: 20px;
+  /* margin-left: 60px; */
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.blank {
+  width: 100%;
+  height: 100%;
+}
+
+.space {
+  padding-right: 180px;
+  padding-bottom: 60px;
+}
 
 /* Mi occupo della quarta sezione */
 
@@ -132,7 +158,27 @@ a, a:hover, a:active, a:visited, a:focus {
   padding: 96px 0px;
 }
 
+#contact h1 {
+  margin-top: 0px;
+}
 
+.apart {
+  all: none;
+}
+
+form {
+  margin-top: 50px;
+}
+
+input {
+  border: none;
+}
+
+.button {
+  background-color: #1ABC9C;
+  padding: 10px;
+  color: white;
+}
 
 /* Mi occupo del footer */
 
@@ -140,6 +186,25 @@ footer {
   height: 302px;
   padding: 80px 0px;
   background-color:#2C3E50
+}
+
+footer h2 {
+  font-size: 25px;
+  margin-top: 30px;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.col-lg-offsett-0half {
+  margin-left: calc((100% / 12) * 0.5);
+}
+
+footer p {
+  font-size: 19px;
+  color: white;
+
 }
 
 /* Mi occupo della ultima parte */
@@ -154,4 +219,27 @@ footer {
 #copyright small {
   color: white;
   font-size: 1.1em;
+}
+
+footer a {
+  color: #1ABC9C;
+}
+
+
+
+/* Prova */
+
+.overlayz {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  background-color: #1ABC9C;
+  justify-content: center;
+  align-content: center;
+  display: none;
 }
