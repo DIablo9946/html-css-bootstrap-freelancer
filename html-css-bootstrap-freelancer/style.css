@@ -55,12 +55,6 @@ header a, header a:hover, header a:active, header a:visited, header a:focus {
   text-align: center;
 }
 
-#section-green hr, #about hr {
-  display: inline-block;
-  width: 150px;
- height: 10px;
- color: white;
-}
 
 #section-green h3 {
   color: white;
@@ -81,14 +75,6 @@ header a, header a:hover, header a:active, header a:visited, header a:focus {
   text-transform: uppercase;
   margin-top: 100px;
   text-align: center;
-}
-
-#images hr, #contact hr {
-  display: inline-block;
-  width: 150px;
- height: 10px;
- color: #2C3E50;
- border-top: 10px solid #2C3E50;
 }
 
 .hstar {
@@ -129,26 +115,9 @@ header a, header a:hover, header a:active, header a:visited, header a:focus {
   font-size: 20px;
 }
 
-#about button {
-  background-color: #1ABC9C;
-  color: white;
-  border: 1px solid white;
-  padding: 20px;
-  font-weight: 600px;
-  margin-top: 20px;
-  /* margin-left: 60px; */
-  /* align-items: center;
-  justify-content: center; */
-}
-
 .blank {
   width: 100%;
   height: 100%;
-}
-
-.space {
-  padding-right: 180px;
-  padding-bottom: 60px;
 }
 
 /* Mi occupo della quarta sezione */
@@ -174,11 +143,6 @@ input {
   border: none;
 }
 
-.button {
-  background-color: #1ABC9C;
-  padding: 10px;
-  color: white;
-}
 
 /* Mi occupo del footer */
 
@@ -227,7 +191,7 @@ footer a {
 
 
 
-/* Prova */
+/* Hover alle immagini */
 
 .overlayz {
   position: absolute;
@@ -253,7 +217,82 @@ footer a {
   margin-bottom: 30px;
 }
 
+
+/* Regole per il button e hover per esso */
+
+#about button {
+  background-color: #1ABC9C;
+  color: white;
+  border: 1px solid white;
+  padding: 15px 35px;
+  font-size: 20px;
+  border-radius: 5px;
+
+}
+
+ .hovbut { /* Chiedere come mai devo assegnare le misure del div a mano  e div da solo fa come vuole */
+  position: relative;
+  width: 214px;
+  height: 60px;
+  margin-top: 20px;
+}
+
+.hovbut:hover .overbut {
+  display: block;
+  cursor: pointer;
+}
+
+.but:hover .overbut {
+  color: black;
+}
+
+.overbut {
+  position: absolute;
+  display: none;
+  z-index: 10;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  padding-top: 15px;
+  color: black;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Regole per i miei hr */
+
+.widhei {
+  /* line-height: 5px; */
+  display: inline-block;
+  width: 150px;
+  border-top: 10px solid;
+  padding-top: 10px;
+}
+
+.whit {
+  color: white;
+}
+
+.bla {
+  color: #2C3E50;
+}
+
+.widhei, .fas {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.hstar {
+  position: relative;
+}
+
 .fas {
-  width: 30px;
-  height: 30px;
+  padding-bottom: 10px;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  left: 155px;
 }
