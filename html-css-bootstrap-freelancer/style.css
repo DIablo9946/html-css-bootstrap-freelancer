@@ -168,8 +168,45 @@ footer h2 {
 footer p {
   font-size: 19px;
   color: white;
+}
+
+.overico {
+  position: absolute;
+  display: none;
+  z-index: 10;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  padding: 9px;
+  color: black;
 
 }
+
+.ico {
+  border: white 1px solid;
+  border-radius: 50%;
+  color: white;
+  margin: 0 9px;
+  padding: 7px;
+  display: inline-block;
+}
+
+.hovico {
+  position: relative;
+  display: inline-block;
+}
+
+.hovico:hover .overico {
+  display: block;
+  cursor: pointer;
+}
+
+
+
+
 
 /* Mi occupo della ultima parte */
 
@@ -206,6 +243,8 @@ footer a {
   display: none;
   z-index: 10;
   border-radius: 15px;
+  padding-top: 40px;
+  padding-left: 36%;
 }
 
 .hovimg:hover .overlayz {
@@ -217,6 +256,10 @@ footer a {
   margin-bottom: 30px;
 }
 
+.plus {
+  color: white;
+  font-size: 130px;
+}
 
 /* Regole per il button e hover per esso */
 
@@ -224,7 +267,7 @@ footer a {
   background-color: #1ABC9C;
   color: white;
   border: 1px solid white;
-  padding: 15px 35px;
+  padding: 15px 22px;
   font-size: 20px;
   border-radius: 5px;
 
@@ -246,6 +289,10 @@ footer a {
   color: black;
 }
 
+.glyphicon {
+  margin-right: 5px;
+}
+
 .overbut {
   position: absolute;
   display: none;
@@ -253,10 +300,10 @@ footer a {
   background-color: white;
   height: 100%;
   width: 100%;
-  top: 0px;
+  top: 0;
   left: 0;
   padding-top: 15px;
-  color: black;
+  /* color: black; */
   border-radius: 5px;
   font-size: 20px;
   text-align: center;
